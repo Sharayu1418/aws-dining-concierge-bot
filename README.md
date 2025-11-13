@@ -4,11 +4,11 @@
 **Course:** Cloud Computing Fall 2025  
 **Assignment:** Assignment 1 - Serverless Dining Concierge
 
-## 🎯 Project Overview
+## Project Overview
 
 A serverless dining concierge chatbot that helps users find restaurant recommendations in Manhattan. The system collects user preferences through natural conversation and processes requests asynchronously to provide personalized dining suggestions.
 
-## 🏗️ Architecture
+## Architecture
 
 ![Serverless Dining Concierge Architecture](docs/architecture.png)
 
@@ -26,56 +26,56 @@ A serverless dining concierge chatbot that helps users find restaurant recommend
 - **SES**: Email delivery service
 - **DLQ**: Dead Letter Queue for handling failed message processing
 
-## ✅ Implementation Status
+## Implementation Status
 
 ### Completed Tasks
 
 #### Task 1 & 2: Frontend and Basic API
-- ✅ S3 static website hosting with public access
-- ✅ API Gateway with Swagger import and CORS configuration
-- ✅ LF0 Lambda function with canned responses
-- ✅ Frontend-backend integration with SDK generation
+- S3 static website hosting with public access
+- API Gateway with Swagger import and CORS configuration
+- LF0 Lambda function with canned responses
+- Frontend-backend integration with SDK generation
 
 #### Task 3: Lex Bot Integration
-- ✅ Amazon Lex V2 bot with three intents:
+- Amazon Lex V2 bot with three intents:
   - `GreetingIntent`: Welcome users
   - `ThankYouIntent`: Acknowledge thanks
   - `DiningSuggestionsIntent`: Collect dining preferences
   - `FallbackIntent`: Incase the chatbot does not understand what the user requirements are, a default fallback intent is triggered.
   - 
-- ✅ LF1 Lambda code hook for validation and fulfillment
-- ✅ Slot collection for: Location, Cuisine, DiningTime, NumberOfPeople, Email
-- ✅ SQS queue integration for request processing
-- ✅ User confirmation messages
+- LF1 Lambda code hook for validation and fulfillment
+- Slot collection for: Location, Cuisine, DiningTime, NumberOfPeople, Email
+- SQS queue integration for request processing
+- User confirmation messages
 
 #### Task 4: API-Lex Integration
-- ✅ LF0 integration with Lex runtime API
-- ✅ Session management for conversation continuity
-- ✅ End-to-end conversation flow
-- ✅ Proper IAM permissions and error handling
+- LF0 integration with Lex runtime API
+- Session management for conversation continuity
+- End-to-end conversation flow
+- Proper IAM permissions and error handling
 
 #### Task 5: Restaurant Data Collection
-- ✅ Yelp API integration for Manhattan restaurants
-- ✅ 1000+ restaurants across 5+ cuisines (Japanese, Chinese, Italian, Mexican, Indian)
-- ✅ DynamoDB table creation with proper schema
-- ✅ Data deduplication and validation
+- Yelp API integration for Manhattan restaurants
+- 1000+ restaurants across 5+ cuisines (Japanese, Chinese, Italian, Mexican, Indian)
+- DynamoDB table creation with proper schema
+- Data deduplication and validation
 
 #### Task 6: ElasticSearch Integration
-- ✅ OpenSearch domain setup
-- ✅ Restaurant data indexing
-- ✅ Search functionality implementation
+- OpenSearch domain setup
+- Restaurant data indexing
+- Search functionality implementation
 
 #### Task 7: Email Processing
-- ✅ LF2 Lambda function for SQS message processing
-- ✅ Restaurant recommendation logic
-- ✅ SES integration for email delivery
+- LF2 Lambda function for SQS message processing
+- Restaurant recommendation logic
+- SES integration for email delivery
 
 #### Extra Credit: Dead Letter Queue (DLQ) Implementation
-- ✅ Attached DLQ to SQS queue (Q1) with `maxReceiveCount` (3-5)
-- ✅ Modified LF2 to prevent message deletion from Q1 on SES email failure
-- ✅ Configured messages to move to DLQ after `maxReceiveCount` exceeded
-- ✅ Implemented logging of failure with `requestId` and error reason in CloudWatch Logs
-- ✅ Demonstrated DLQ functionality with invalid email address test case
+- Attached DLQ to SQS queue (Q1) with `maxReceiveCount` (3-5)
+- Modified LF2 to prevent message deletion from Q1 on SES email failure
+- Configured messages to move to DLQ after `maxReceiveCount` exceeded
+- Implemented logging of failure with `requestId` and error reason in CloudWatch Logs
+- Demonstrated DLQ functionality with invalid email address test case
 
 ## 📁 Project Structure
 
