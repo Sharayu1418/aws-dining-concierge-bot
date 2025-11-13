@@ -1,6 +1,6 @@
 # Dining Concierge Chatbot - Cloud Computing Assignment 1
 
-**Team Members:** **Rohan Gore (N19332535 - rmg9725) and Sharayu Rasal (N10802566 - srr10019)** 
+**Team Members:** Sharayu Rasal (N10802566 - srr10019) and Rohan Gore (N19332535 - rmg9725) ** 
 **Course:** Cloud Computing Fall 2025  
 **Assignment:** Assignment 1 - Serverless Dining Concierge
 
